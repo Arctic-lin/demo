@@ -20,8 +20,10 @@ def get_proxies():
 	mac_type = soup.select ('#ip_list > tr > td:nth-child(6)')
 	for i in range(len(mac_address)):
 		if "socks" not in str(mac_type[i]):
-			data["%s"%str(mac_address[i]).replace("<td>","").replace("</td>","")] = \
+			if str(mac_port[i]) == "80" or "8080":
+				data["%s"%str(mac_address[i]).replace("<td>","").replace("</td>","")] = \
 				["%s"%str(mac_port[i]).replace("<td>","").replace("</td>",""),"%s"%str(mac_type[i]).replace("<td>","").replace("</td>","")]
 	return data
 if __name__ == '__main__':
-	get_proxies()
+	a=get_proxies()
+	print(a)
