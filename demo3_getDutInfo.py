@@ -3,7 +3,7 @@
 # @Author  : Arctic
 # @FileName: demo3_getDutInfo.py
 # @Software: PyCharm
-# @Purpose :Get Device SN
+# @Purpose :Get Device info(adb)
 
 import os
 import subprocess
